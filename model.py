@@ -641,6 +641,7 @@ class RotaryEmbedding(hk.Module):
         base_exponent (int): Base exponent to compute embeddings from
     """
 
+
     def __init__(
         self,
         dim: int,
@@ -958,6 +959,7 @@ class MHABlock(hk.Module):
         h_attn = attn_output.embeddings
 
         return attn_output._replace(embeddings=h_attn)
+
 
 
 @dataclass
